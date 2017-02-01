@@ -24,7 +24,7 @@ public static void main (String[] args)
 /**/
 
 		int x = 50;
-		int[] num = new int[1000];
+		int[] num = new int[1000000000];
 		int[] values = new int[20];
 		int[] oddnums = new int[num.length];
 		int[] evennums = new int[num.length];
@@ -62,6 +62,8 @@ public static void main (String[] args)
 		int look = 42;
 
 		System.out.println(Searches.linearSearch(num,look)  );
+		Sorts.insertionSort(num);
+
 		System.out.println(Searches.binarySearch(num,look)  );
 
 
