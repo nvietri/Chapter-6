@@ -154,30 +154,42 @@ public class mathy
 	public static int sum2DArray(int [][] scores)
 	{
 
-
+		int total = 0;
 
 		for ( int row=0; row < scores.length; row++)
 		{
-			for ( int col=0; col < scores[row].length; col++)
+			for ( int col=0; col < scores[row].length; col++){
 				System.out.print (scores[row][col] + "\t");
+				total = total + scores[row][col];}
 
 			System.out.println();
       	}
 
 
-		return 0;
+		return total;
 
 	}
 
 
 
-	public int sumOneRow2DArray(int row)
+	public static int sumOneRow2DArray(int [] array)
 	{	int total = 0;
-
+		for(int i =0; i<array.length;i++)
+			total = total + array[i];
 
 
 
 		return total;
+
+	}
+	public static int sumOneCol2DArray(int[][] array,int col)
+		{	int total = 0;
+			for(int i =0; i<array.length;i++)
+				total = total + array[i][col-1];
+
+
+
+			return total;
 
 	}
 

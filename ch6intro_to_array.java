@@ -24,7 +24,7 @@ public static void main (String[] args)
 /**/
 
 		int x = 50;
-		int[] num = new int[1000000000];
+		int[] num = new int[100];
 		int[] values = new int[20];
 		int[] oddnums = new int[num.length];
 		int[] evennums = new int[num.length];
@@ -41,6 +41,8 @@ public static void main (String[] args)
 	   Random gen = new Random();
 	   //2int[] num = new int[20];
 // pop with random numbers range -50 to 50
+
+/*
 
 	   for(int i =0; i<num.length; i++)
 	   {
@@ -65,7 +67,7 @@ public static void main (String[] args)
 		Sorts.insertionSort(num);
 
 		System.out.println(Searches.binarySearch(num,look)  );
-
+*/
 
 /*
 
@@ -125,8 +127,33 @@ public static void main (String[] args)
 	   negnum = neg(num);
 
  */
+ int[][] scores = { {1,2,3},
+ 				   {2,2,3},
+ 			   	   {3,2,3},
+			   	   {4,2,3} };
+System.out.println(scores.length);
+System.out.println(mathy.sum2DArray(scores));
+System.out.println(mathy.sumOneRow2DArray(scores[3]));
+System.out.println(mathy.sumOneCol2DArray(scores,3));
+//rows = scores.length
+
+//for(int i=0; i<scores.length*scores[0];i++)
+
+int[][] table = new int[5][10];
+
+for(int row=0;row <table.length;row++)
+	for(int col=0;col<table[row].length;col++)
+		table[row][col] = row * 10 + col;
+
+for(int row=0; row<table.length;row++){
+	for(int col=0;col<table[row].length;col++)
+		System.out.print(table[row][col]+"\t");
+
+		System.out.println();
+	}
 
 }// end of main
+
 
    public static int[] doubleSize(int[] array)
    {
@@ -170,6 +197,8 @@ public static void main (String[] args)
    }//end of neg
 
 	/*  */
+
+
 }// end of class
 
 
