@@ -3,6 +3,7 @@ public class MagicSquare{
 	public MagicSquare(int [][] array)
 	{
 		int [][]square = array;
+		//private int magicnum;
 		//int rows = square.length;
 		//int cols = square[rows].length;
 
@@ -21,16 +22,27 @@ public class MagicSquare{
 
 
 	//}
-	public static int addRow(int row,int[][] square){
+	public static int addRow(int[][] square){
+		//int row[] = new int[square.length];
 		int total = 0;
-		for(int i =0; i< square.length-1;i++){
-			total = total + square[0][i];
-			for(int k = 0; k<square[row].length-1;k++)
-				total = total + square[i][row];
-
+		int rowtotal = 0;
+		for(int i =0; i< square.length;i++){
+			rowtotal = 0;
+			for(int k = 0; k<square[i].length;k++){
+				rowtotal += square[i][k];
+				total += square[i][k];
+				//System.out.println(square[i][k]);
+				//System.out.println(total);
+			}
 		}
 
-		return total;
+		if(rowtotal == (total/(square.length))){
+			System.out.println("yes");
+			return rowtotal;}
+		else{
+			System.out.println("no");
+			return 0;}
+
 
 	}
 

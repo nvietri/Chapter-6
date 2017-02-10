@@ -28,7 +28,7 @@ public class MagicSquareTest
 						{4,15,14, 1}  };
 
 	// magic square or not a magic square, that is the question
-	int [][] square1 = { {5,9,1},
+	int [][] square1 = { {5,9,2},
 						 {7,2,6},
 						 {3,4,8}  };
 
@@ -39,14 +39,14 @@ public class MagicSquareTest
 						{10,18, 1,14,22},
 						{23, 6,19, 2,15}  };
 
-	MagicSquare useful = new MagicSquare(square1);
+	MagicSquare useful = new MagicSquare(square2);
 
 	//if (useful.isMagic())
 		//System.out.println("It's MAGIC!! With a sum of "+ useful.getMagicNum());
 	//else
 		//System.out.println("Hello muggle");
 
-	useful.addRow(0,square1);
+	useful.addRow(square1);
 
 	// print the same results for square2 and square3
 
