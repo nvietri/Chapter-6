@@ -21,7 +21,7 @@ public static void main (String[] args)
 {
 
 
-/**/
+/*
 
 		int x = 50;
 		int[] num = new int[100];
@@ -30,7 +30,41 @@ public static void main (String[] args)
 		int[] evennums = new int[num.length];
 		int[] negnum = new int[MAX];
 		mathy m = new mathy();
+*/
 
+
+		//,. indicates the type of array list
+		ArrayList <String> farm = new ArrayList<>();
+
+		for(int i = 0;i<20;i++){
+			farm.add("chicky");
+			farm.add("chicky");
+			farm.add("duck");
+			farm.add("cow");
+				}
+
+		int count = 0;
+		for(int i = 0;i<farm.size();){ //running the loop backwards would also work for(int i = farm.size()-1; i >= 0; i--)
+			if(farm.get(i).equals("duck"))
+				count++;
+			if(farm.get(i).equals("chicky"))
+				farm.remove(i);
+			else
+				i++;
+		}
+
+
+
+		ArrayList <String> list = new ArrayList<>();
+
+		//ArrayList <int> list1 = new ArrayList<>();
+
+		ArrayList <Integer> list2 = new ArrayList<>();
+		System.out.println(farm);
+
+		ArrayList <CD> mycds = new ArrayList<>();
+
+		mycds.add(new CD("Faneto","Otto da Lotto",300.00,2));
 
 	   //int[] num = new int[100];
 	   //int[] values = new int[20];
@@ -127,18 +161,18 @@ public static void main (String[] args)
 	   negnum = neg(num);
 
  */
- int[][] scores = { {1,2,3},
- 				   {2,2,3},
- 			   	   {3,2,3},
-			   	   {4,2,3} };
-System.out.println(scores.length);
-System.out.println(mathy.sum2DArray(scores));
-System.out.println(mathy.sumOneRow2DArray(scores[3]));
-System.out.println(mathy.sumOneCol2DArray(scores,3));
+ //int[][] scores = { {1,2,3},
+ 				//   {2,2,3},
+ 			   //	   {3,2,3},
+			   	//   {4,2,3} };
+//System.out.println(scores.length);
+//System.out.println(mathy.sum2DArray(scores));
+//System.out.println(mathy.sumOneRow2DArray(scores[3]));
+//System.out.println(mathy.sumOneCol2DArray(scores,3));
 //rows = scores.length
 
 //for(int i=0; i<scores.length*scores[0];i++)
-
+/*
 int[][] table = new int[5][10];
 
 for(int row=0;row <table.length;row++)
@@ -151,6 +185,7 @@ for(int row=0; row<table.length;row++){
 
 		System.out.println();
 	}
+	*/
 
 }// end of main
 
