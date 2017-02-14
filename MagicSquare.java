@@ -3,21 +3,22 @@ public class MagicSquare{
 	public MagicSquare(int [][] array)
 	{
 		int [][]square = array;
+		int isRow = addRow(square);
+		int isCol = addCol(square);
+		if(isRow == 0 || isCol == 0)
+			System.out.println("This is not a magic square.");
+		else
+			System.out.println("The magic number is:" + isRow);
 		//private int magicnum;
 		//int rows = square.length;
 		//int cols = square[rows].length;
 
 	}
-	public void getMagicNum(){
-		int isRow = addRow(int[][]square);
-		int isCol = addCol(int[][]square);
-		if(isRow == 0 || isCol == 0)
-			System.out.println("This is not a magic square.");
-		else{
-			System.out.println("The magic number is:" + isRow);
+	//public void getMagicNum(){
+		
 
-		}
-	}
+	//	}
+	//}
 	public static int addCol(int[][]square){
 		int col[] = new int[square.length];
 		int ret = 0;
@@ -55,7 +56,7 @@ public class MagicSquare{
 
 		for(int n = 0;n<row.length;n++){
 			if(row[n] == rowtotal)
-				ret = coltotal;
+				ret = rowtotal;
 			else{
 				ret = 0;
 				break;}
