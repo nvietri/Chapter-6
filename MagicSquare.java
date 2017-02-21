@@ -5,7 +5,8 @@ public class MagicSquare{
 		int [][]square = array;
 		int isRow = addRow(square);
 		int isCol = addCol(square);
-		if(isRow == 0 || isCol == 0)
+		int isDiag = addDiag(square);
+		if(isRow == 0 || isCol == 0 || isDiag == 0)
 			System.out.println("This is not a magic square.");
 		else
 			System.out.println("The magic number is:" + isRow);
@@ -66,6 +67,30 @@ public class MagicSquare{
 
 		return ret;
 	}
+	public static int addDiag(int[][] square){
+		int diag[] = new int[square.length];
+		int ret = 0;
+		int diagtotal = 0;
+		for(int i = 0; i<square.length;){
+			diagtotal = 0;
+			for(int k = 0; k<square[i].length;k++){
+				diagtotal += square[i][k];
+				i++;
+		}
+		diag[i] = diagtotal;
+			}
+			
+		for(int j = 0;j<diag.length;j++){
+			if(diag[j] == diagtotal)
+				ret = diagtotal;
+			else{
+				ret = 0;
+				break;
+			}
+		}
+		return ret;
+		
+	}//end of addDiag
 
 
 
