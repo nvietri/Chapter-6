@@ -1,0 +1,33 @@
+#BlueJ class context
+comment0.params=
+comment0.target=mathy()
+comment0.text=\r\n\t\tdefault\ constructor\ -\ stubed\ in\r\n\r\n
+comment1.params=array
+comment1.target=mathy(int[][])
+comment10.params=array\ col
+comment10.target=int\ sumOneCol2DArray(int[][],\ int)
+comment11.params=scores
+comment11.target=int[]\ sumall2DArray(int[][])
+comment12.params=array
+comment12.target=int[]\ doubleSize(int[])
+comment12.text=\r\n\t\tDoubles\ the\ size\ of\ an\ array\r\n\t\t@param\ int\ []\r\n\t\t@return\ int\ []\ twice\ the\ size,\ with\ values\ copied\ over\r\n
+comment2.params=x
+comment2.target=int\ abs(int)
+comment2.text=\r\n\t\ttake\ the\ absoulute\ value\ of\ the\ number\r\n\t\t@param\ int\ value\r\n\t\t@return\ absoulute\ value\ of\ number\r\n
+comment3.params=x\ y
+comment3.target=int\ add(int,\ int)
+comment3.text=\r\n\r\n\tpublic\ \ int[]\ getOdd\ (\ int[]\ num1)\r\n\t{\toddnum\ \=\ 21useful.getOdd(num);\r\n\r\n\t\tfor\ (int\ s\ \:\ oddnum)\r\n\t\t{\r\n\t\t\tSystem.out.println(s);\r\n\t\t}\r\n\t\tfor(\ ;\ i<num1.length();i++)\r\n\t\t{\r\n\t\t\tif(num1[i]\ %\ 2\ \!\=\ 0)\r\n\t\t\todd[i]\ \=\ num1[i];\r\n\t\t}\r\n\r\n\t\treturn\ odd;\r\n\r\n\r\n\t}//end\ of\ getOdd\r\n\r\n\r\n\r\n\r\n\r\n\r\n\tpublic\ void\ getEven(int[]\ num,\ int\ evennum\ [])\r\n\t{\r\n\r\n\r\n\r\n\r\n\r\n\t}//end\ of\ getEven\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t/**\r\n\t\ttwo\ int\ parameters\ and\ adds\ them\r\n\t\t@param\ 2\ int\ values\r\n\t\t@return\ int\ sum\ of\ values\r\n
+comment4.params=x\ y
+comment4.target=double\ add(double,\ double)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\t\t\tmessage\ from\ Mathy\ class\r\n\t\t\t@param\ none\r\n\t\t\t@return\ String\ message\r\n
+comment6.params=a1\ a2
+comment6.target=void\ switchThem(int[],\ int[])
+comment7.params=a1\ a2
+comment7.target=void\ count(int[],\ int[])
+comment8.params=scores
+comment8.target=int\ sum2DArray(int[][])
+comment9.params=array
+comment9.target=int\ sumOneRow2DArray(int[])
+numComments=13

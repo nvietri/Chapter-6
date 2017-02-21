@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=array
+comment0.target=MagicSquare(int[][])
+comment1.params=square
+comment1.target=int\ addCol(int[][])
+comment2.params=square
+comment2.target=int\ addRow(int[][])
+comment3.params=square
+comment3.target=int\ addDiag(int[][])
+numComments=4

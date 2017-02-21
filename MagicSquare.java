@@ -6,17 +6,21 @@ public class MagicSquare{
 		int isRow = addRow(square);
 		int isCol = addCol(square);
 		int isDiag = addDiag(square);
-		if(isRow == 0 || isCol == 0 || isDiag == 0)
+		if(isRow == 0 || isCol == 0 || isDiag == 0){
 			System.out.println("This is not a magic square.");
-		else
+			System.out.println(isRow + "\n" + isCol + "\n" + isDiag);
+}
+		else{
 			System.out.println("The magic number is:" + isRow);
+			System.out.println(isRow + "\n" + isCol + "\n" + isDiag);
+}
 		//private int magicnum;
 		//int rows = square.length;
 		//int cols = square[rows].length;
 
 	}
 	//public void getMagicNum(){
-		
+
 
 	//	}
 	//}
@@ -71,15 +75,15 @@ public class MagicSquare{
 		int diag[] = new int[square.length];
 		int ret = 0;
 		int diagtotal = 0;
-		for(int i = 0; i<square.length;){
+		for(int i = 0; i<square.length;i++){
 			diagtotal = 0;
 			for(int k = 0; k<square[i].length;k++){
 				diagtotal += square[i][k];
-				i++;
+				//i++;
 		}
 		diag[i] = diagtotal;
 			}
-			
+
 		for(int j = 0;j<diag.length;j++){
 			if(diag[j] == diagtotal)
 				ret = diagtotal;
@@ -89,7 +93,7 @@ public class MagicSquare{
 			}
 		}
 		return ret;
-		
+
 	}//end of addDiag
 
 
