@@ -28,8 +28,8 @@ public class MagicSquareTest
 						{4,15,14, 1}  };
 
 	// magic square or not a magic square, that is the question
-	int [][] square1 = { {5,8,1},
-						 {7,3,6},
+	int [][] square1 = { {5,9,1},
+						 {7,2,6},
 						 {3,4,8}  };
 
 	// Do you belive in magic?
