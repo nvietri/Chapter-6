@@ -103,11 +103,28 @@ public class MagicSquare{
 		//adding the diagonal total to the single dimension array
 		diag[i] = diagtotal;
 			}
+
+
+
+		int diag2[] = new int[square.length];
+
+		int ret2 = 0;
+
+		int diagtotal2 = 0;
+
+		for(int n = square.length-1; n > 0; n--){
+			diagtotal2 = 0;
+			for(int u = square.length-1; u > 0; u--){
+				diagtotal2 += square[u][n];
+			}
+			diag2[n] += diagtotal2;
+		}
 		//for loop for checking all the values that were added into the single dimension array
 		for(int j = 0;j<diag.length;j++){
-			if(diag[j] == diagtotal)
+			if(diag[j] == diagtotal){
+				if(diag[j] == diag2[j])
 			//if they are all good then it will set the return value = magic number
-				ret = diagtotal;
+					ret = diagtotal;}
 			else{
 			//if there is even a single value that is off, it will trigger the else statement which will make the return value 0, and break the for loop
 				ret = 0;
@@ -117,6 +134,20 @@ public class MagicSquare{
 		return ret;
 
 	}//end of addDiag
+
+	public String toString(int[][] square){
+		for(int i = 0; i < square.length; i ++){
+			for(int k = 0; k < square[i].length; k++){
+				System.out.print(square[i][k]);
+
+			}
+			System.out.println("");
+		}
+		return "Here is the square.";
+
+
+
+	}//end of toString
 
 
 
