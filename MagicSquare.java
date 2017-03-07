@@ -10,6 +10,7 @@ public class MagicSquare{
 		int isRow = addRow(square);
 		int isCol = addCol(square);
 		int isDiag = addDiag(square);
+		toString(square);
 		//tests to see if any of the calculations output 0
 		//if 0 that will trigger the first if statement
 		if(isRow == 0 || isCol == 0 || isDiag == 0){
@@ -117,7 +118,7 @@ public class MagicSquare{
 		//for loop to run through the 2D array
 		for(int n = square.length-1; n > 0; n--){
 			diagtotal2 = 0;
-			for(int u = square.length-1; u > 0; u--){
+			for(int u = 0; u > square.length; u++){
 				diagtotal2 += square[u][n];
 			}
 			//adding all of the values into the array
@@ -139,18 +140,16 @@ public class MagicSquare{
 
 	}//end of addDiag
 
-	public String toString(int[][] square){
-		int temp = 0;
-		for(int i = 0; i < square.length; i ++){
-			for(int k = 0; k < square[i].length; k++){
-				temp = square[i][k];
-				System.out.print(temp);
-			}
-			System.out.println("");
+	public String toString(int[][]square)
+	{
+		//int[][] square = array;
+		for(int i = 0; i < square.length; i++)
+		{
+			for(int k = 0; k < square.length;k++)
+				System.out.print(square[i][k] + "\t");
+			System.out.println();
 		}
-		return "Here is the square.";
-
-
+		return "";
 
 	}//end of toString
 
