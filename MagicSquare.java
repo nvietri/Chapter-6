@@ -105,18 +105,22 @@ public class MagicSquare{
 			}
 
 
-
+		//another diagonal check to check the opposite diagonal
+		//creating another array
 		int diag2[] = new int[square.length];
 
+		//initializing the return value to just zero
 		int ret2 = 0;
 
 		int diagtotal2 = 0;
 
+		//for loop to run through the 2D array
 		for(int n = square.length-1; n > 0; n--){
 			diagtotal2 = 0;
 			for(int u = square.length-1; u > 0; u--){
 				diagtotal2 += square[u][n];
 			}
+			//adding all of the values into the array
 			diag2[n] += diagtotal2;
 		}
 		//for loop for checking all the values that were added into the single dimension array
@@ -136,10 +140,11 @@ public class MagicSquare{
 	}//end of addDiag
 
 	public String toString(int[][] square){
+		int temp = 0;
 		for(int i = 0; i < square.length; i ++){
 			for(int k = 0; k < square[i].length; k++){
-				System.out.print(square[i][k]);
-
+				temp = square[i][k];
+				System.out.print(temp);
 			}
 			System.out.println("");
 		}
