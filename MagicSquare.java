@@ -10,11 +10,8 @@ public class MagicSquare{
 		square = array;
 		
 		int isRow = addRow(square);
-		System.out.println(isRow);
 		int isCol = addCol(square);
-		System.out.println(isCol);
 		int isDiag = addDiag(square);
-		System.out.println(isDiag);
 		//toString(square);
 		//tests to see if any of the calculations output 0
 		//if 0 that will trigger the first if statement
@@ -23,7 +20,7 @@ public class MagicSquare{
 			//System.out.println(isRow + "\n" + isCol + "\n" + isDiag);
 }
 		else{
-			System.out.println("The magic number is:" + isRow);
+			System.out.println("It is MAGIC, and the magic number is: " + isRow);
 			//System.out.println(isRow + "\n" + isCol + "\n" + isDiag);
 }
 
@@ -93,45 +90,29 @@ public class MagicSquare{
 		return ret;
 	}
 	public static int addDiag(int[][] square){
-		//creating the single dimension array that will have all the diagonal values added into it
-		int diag[] = new int[square.length];
 		//creaing the return value that will be set equal to the diagonal values all added up.
 		int ret = 0;
 		//setting the diagonal total  = 0 and reseting it when the loop reruns
 		int diagtotal = 0;
-		//for loop within a for loop that will go through all the diagonal values and see if they all add up to the same value
+		//for loop that will go through all the diagonal values and see if they all add up to the same value
 		for(int i = 0; i<square.length;i++){
-			diagtotal = 0;
-			for(int k = 0; k<square[i].length;k++){
-				diagtotal += square[i][k];
-				//i++;
+			diagtotal += square[0+i][(square.length-1)-i];
+				
 		}
-		//adding the diagonal total to the single dimension array
-		diag[i] = diagtotal;
-			}
 
 
 		//another diagonal check to check the opposite diagonal
-		//creating another array
-		int diag2[] = new int[square.length];
-
-		//initializing the return value to just zero
-		int ret2 = 0;
 
 		int diagtotal2 = 0;
 
 		//for loop to run through the 2D array
-		for(int n = 0; n < square.length; n++){
-			diagtotal2 = 0;
-			for(int u = square[n].length-1; u >= 0; u--){
-				diagtotal2 += square[n][u];
-			}
-			//adding all of the values into the array
-			diag2[n] += diagtotal2;
-		}
-		//for loop for checking all the values that were added into the single dimension array
-		System.out.println("dtotal"+ diagtotal);
-		System.out.println("dtotal2" + diagtotal2);
+		
+		for(int u = 0; u < square.length; u++)
+			diagtotal2 += square[0 + u][(square.length-1)-u];
+			
+		
+			
+		//if statements for checking all the values that were added into the single dimension array
 		if(diagtotal == diagtotal2)
 			ret = diagtotal;
 		else
