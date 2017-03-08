@@ -8,7 +8,7 @@ public class MagicSquare{
 	public MagicSquare(int [][] array)
 	{
 		square = array;
-		
+
 		int isRow = addRow(square);
 		int isCol = addCol(square);
 		int isDiag = addDiag(square);
@@ -96,8 +96,8 @@ public class MagicSquare{
 		int diagtotal = 0;
 		//for loop that will go through all the diagonal values and see if they all add up to the same value
 		for(int i = 0; i<square.length;i++){
-			diagtotal += square[0+i][(square.length-1)-i];
-				
+			diagtotal += square[0+i][0+i];
+
 		}
 
 
@@ -106,18 +106,19 @@ public class MagicSquare{
 		int diagtotal2 = 0;
 
 		//for loop to run through the 2D array
-		
+
 		for(int u = 0; u < square.length; u++)
-			diagtotal2 += square[0 + u][(square.length-1)-u];
-			
-		
-			
+			diagtotal2 += square[(square.length-1)-u][0+u];
+
+
+
+
 		//if statements for checking all the values that were added into the single dimension array
 		if(diagtotal == diagtotal2)
-			ret = diagtotal;
+			ret = diagtotal2;
 		else
 			ret = 0;
-			
+
 		return ret;
 
 	}//end of addDiag
