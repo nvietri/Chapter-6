@@ -3,14 +3,19 @@
 //Magic Square
 //Program will take a 2D array, add the col, rows, and diags and see if they all add up to the same value
 public class MagicSquare{
+	int [][]square = new int[1][1];
 
 	public MagicSquare(int [][] array)
 	{
-		int [][]square = array;
+		square = array;
+		
 		int isRow = addRow(square);
+		System.out.println(isRow);
 		int isCol = addCol(square);
+		System.out.println(isCol);
 		int isDiag = addDiag(square);
-		toString(square);
+		System.out.println(isDiag);
+		//toString(square);
 		//tests to see if any of the calculations output 0
 		//if 0 that will trigger the first if statement
 		if(isRow == 0 || isCol == 0 || isDiag == 0){
@@ -116,31 +121,27 @@ public class MagicSquare{
 		int diagtotal2 = 0;
 
 		//for loop to run through the 2D array
-		for(int n = square.length-1; n > 0; n--){
+		for(int n = 0; n < square.length; n++){
 			diagtotal2 = 0;
-			for(int u = 0; u > square.length; u++){
-				diagtotal2 += square[u][n];
+			for(int u = square[n].length-1; u >= 0; u--){
+				diagtotal2 += square[n][u];
 			}
 			//adding all of the values into the array
 			diag2[n] += diagtotal2;
 		}
 		//for loop for checking all the values that were added into the single dimension array
-		for(int j = 0;j<diag.length;j++){
-			if(diag[j] == diagtotal){
-				if(diag[j] == diag2[j])
-			//if they are all good then it will set the return value = magic number
-					ret = diagtotal;}
-			else{
-			//if there is even a single value that is off, it will trigger the else statement which will make the return value 0, and break the for loop
-				ret = 0;
-				break;
-			}
-		}
+		System.out.println("dtotal"+ diagtotal);
+		System.out.println("dtotal2" + diagtotal2);
+		if(diagtotal == diagtotal2)
+			ret = diagtotal;
+		else
+			ret = 0;
+			
 		return ret;
 
 	}//end of addDiag
 
-	public String toString(int[][]square)
+	public String toString()
 	{
 		//int[][] square = array;
 		for(int i = 0; i < square.length; i++)
